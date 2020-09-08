@@ -37,4 +37,7 @@ class Estudiante(Persona):
 class Curso(models.Model):
     asignatura = models.ForeignKey(Asignatura, models.CASCADE)
     docente = models.ForeignKey(Docente, models.CASCADE)
-    estudiantes = models.ManyToManyField(Estudiante)
+    estudiantes = models.ManyToManyField(Estudiante, blank=True)
+
+    def __str__(self):
+        return "{} --- {}".format(self.asignatura, self.docente)
