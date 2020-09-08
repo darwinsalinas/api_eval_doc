@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
-from encuesta.views import EncuestaViewSet, PreguntaViewSet, OpcionViewSet
+from encuesta.views import EncuestaViewSet, PreguntaViewSet, OpcionViewSet, PreguntaSingle
 from academia.views import DocenteViewSet, EstudianteViewSet, CursoViewSet
 
 
@@ -17,4 +17,5 @@ router.register(r'cursos', CursoViewSet)
 urlpatterns = [
     path('', admin.site.urls),
     path('api/', include(router.urls)),
+    # path('api/preguntas/<int:pk>', PreguntaSingle.as_view()),
 ]

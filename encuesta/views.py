@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from rest_framework import viewsets
+from rest_framework.generics import RetrieveAPIView
 
 
 from .models import Encuesta, Pregunta, Opcion
@@ -16,5 +17,11 @@ class PreguntaViewSet(viewsets.ModelViewSet):
 
 
 class OpcionViewSet(viewsets.ModelViewSet):
+    queryset = Opcion.objects.all()
+    serializer_class = OpcionSerializer
+
+
+
+class PreguntaSingle(RetrieveAPIView):
     queryset = Opcion.objects.all()
     serializer_class = OpcionSerializer

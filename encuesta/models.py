@@ -21,7 +21,7 @@ class Pregunta(models.Model):
 
 
 class Opcion(models.Model):
-    pregunta = models.ForeignKey(Pregunta, models.CASCADE)
+    pregunta = models.ForeignKey(Pregunta, models.CASCADE, related_name='opciones')
     opcion = models.CharField(max_length=200)
     votos = models.IntegerField(default=0)
 

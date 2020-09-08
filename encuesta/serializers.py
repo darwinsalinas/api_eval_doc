@@ -8,13 +8,17 @@ class EncuestaSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class PreguntaSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Pregunta
-        fields = '__all__'
-
-
 class OpcionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Opcion
-        fields = '__all__'
+        fields = ['opcion', 'votos']
+
+
+class PreguntaSerializer(serializers.ModelSerializer):
+    opciones = OpcionSerializer(many=True, read_only=True)
+    class Meta:
+        model = Pregunta
+        fields = ['pregunta', 'opciones']
+
+
+
