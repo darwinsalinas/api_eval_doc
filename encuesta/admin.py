@@ -3,8 +3,15 @@ from .models import Encuesta, Pregunta, Opcion
 
 
 admin.site.register(Encuesta)
-admin.site.register(Pregunta)
-admin.site.register(Opcion)
+
+
+class OpcioAdmin(admin.TabularInline):
+    model = Opcion
+
+class PreguntaAdmin(admin.ModelAdmin):
+   inlines = [OpcioAdmin,]
+
+admin.site.register(Pregunta, PreguntaAdmin)
 
 
 
