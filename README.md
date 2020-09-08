@@ -8,6 +8,12 @@ Pasos para la correr el proyecto
 git clone git@github.com:darwinsalinas/api_eval_doc.git
 ```
 
+- Instalar python3 si aun no lo tienes instalado
+
+```bash
+choco install -y python3
+```
+
 - Crear entorno virtual dentro de la carpeta del repo
 
 ```bash
