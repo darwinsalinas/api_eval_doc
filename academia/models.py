@@ -1,5 +1,7 @@
 from django.db import models
 
+# from encuesta.models import Encuesta
+
 
 class Persona(models.Model):
     nombres = models.CharField(max_length=100)
@@ -31,7 +33,7 @@ class Docente(Persona):
 
 
 class Estudiante(Persona):
-    pass
+    encuestas = models.ManyToManyField('encuesta.Encuesta', blank=True)
 
 
 class Curso(models.Model):
