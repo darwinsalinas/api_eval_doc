@@ -45,5 +45,4 @@ python manage.py runserver
 ```
 
 
-Si no quieres levantar el servicio en tu propia computadora puedes entrar a esta URL
-[http://dsalinas.pythonanywhere.com/] http://dsalinas.pythonanywhere.com/
+Si no quieres levantar el servicio en tu propia computadora puedes entrar a esta URL http://dsalinas.pythonanywhere.com/
