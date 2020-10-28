@@ -43,3 +43,6 @@ pip install -r requirements.txt
 ```bash
 python manage.py runserver
 ```
+
+
+Si no quieres levantar el servicio en tu propia computadora puedes entrar a esta URL http://dsalinas.pythonanywhere.com/
